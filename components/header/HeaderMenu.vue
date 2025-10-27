@@ -10,42 +10,44 @@ const toggleMenu = (menu: string) => {
 
 <template>
   <ul class="navbar-nav navbar-nav-scroll">
+    <!-- Home -->
     <li class="vorix-dd">
-      <a href="#" @click.prevent="toggleMenu('home')">Home</a>
+      <NuxtLink to="/">Home</NuxtLink>
     </li>
 
     <!-- Certifications Dropdown -->
     <li class="vorix-dd">
-      <a href="#" @click.prevent="toggleMenu('certifications')">Certifications</a>
+      <a href="#" @click.prevent="toggleMenu('certifications')">
+        Certifications
+      </a>
       <ul
         class="vorix-dd-menu"
         :class="[activeMenu === 'certifications' ? 'd-block' : '']"
       >
         <li>
-          <NuxtLink to="/executive-programs">Executive Programs</NuxtLink>
+          <NuxtLink to="/services/executive-programs">Executive Programs</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/international-certifications">
+          <NuxtLink to="/services/international-certifications">
             International Certifications
           </NuxtLink>
         </li>
       </ul>
     </li>
 
+    <!-- About Us -->
     <li class="vorix-dd">
-      <a href="/about-us" @click.prevent="toggleMenu('about')">About Us</a>
+      <NuxtLink to="/about-us">About Us</NuxtLink>
     </li>
 
-
-
+    <!-- Contact -->
     <li class="vorix-dd">
-      <a href="=/contact" @click.prevent="toggleMenu('contact')">Contact</a>
+      <NuxtLink to="/contact">Contact</NuxtLink>
     </li>
   </ul>
 </template>
 
 <style scoped>
-/* Optional dropdown visibility control (same as header 2) */
 .vorix-dd-menu {
   display: none;
 }
