@@ -28,7 +28,7 @@ const toggleMenu = (menu: string) => {
           <NuxtLink to="/services/executive-programs">Executive Programs</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/services/international-certifications">
+          <NuxtLink to="/services/international-certification">
             International Certifications
           </NuxtLink>
         </li>
