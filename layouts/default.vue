@@ -9,7 +9,7 @@ import ScrollToTop from "~/components/ScrollToTop.vue";
 
 // WhatsApp configuration
 const whatsappNumber = "+50687016253"; // Replace with your WhatsApp number (include country code without +)
-const whatsappMessage = "Hello! I'm interested in tara solutions."; // Default message
+const whatsappMessage = "Welcome to Tara Solutions, how can we help you?"; // Default message
 
 const openWhatsApp = () => {
   const encodedMessage = encodeURIComponent(whatsappMessage);
