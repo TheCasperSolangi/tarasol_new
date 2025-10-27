@@ -1,0 +1,629 @@
+@use 'rs';
+@use 'color';
+
+/* Light Version */
+
+.light-mode {
+   background-color: color.$heading;
+   color: color.$secondary;
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      color: color.$bg;
+   }
+
+   a,
+   a:hover,
+   a:focus {
+      color: color.$secondary;
+   }
+
+   .bg-secondary {
+      background-color: color.$light-bg !important;
+   }
+
+   .bg-bg {
+      background-color: color.$white !important;
+   }
+
+   #preloader {
+      background-color: color.$light-bg;
+   }
+
+   .header-area {
+      background-color: color.$heading;
+
+      &::after {
+         background-color: rgba(26, 26, 26, 0.20);
+      }
+
+      .navbar-toggler {
+         color: color.$bg;
+      }
+
+      .navbar-nav li>a {
+         color: color.$bg;
+      }
+
+      .navbar-nav li .vorix-dd-menu {
+         background-color: color.$light-bg;
+         border: 1px solid rgba(26, 26, 26, 0.20);
+      }
+
+      .navbar-nav li .vorix-dd-menu li>a {
+         color: color.$bg;
+
+         &:hover,
+         &:focus {
+            color: color.$primary;
+         }
+      }
+
+      &.sticky-on {
+         box-shadow: 0 1rem 3rem rgba(15, 30, 150, 0.175);
+      }
+   }
+
+   .hero-content {
+      .hero-subtitle {
+         color: color.$secondary;
+      }
+
+      &.home2 {
+
+         h2,
+         h6 {
+            color: color.$bg;
+         }
+      }
+   }
+
+   .header-search-btn .btn {
+      svg {
+         path {
+            fill: color.$bg;
+         }
+      }
+   }
+
+   .btn-link {
+      color: color.$bg;
+
+      &::after {
+         background-color: color.$bg;
+      }
+
+      svg {
+         path {
+            stroke: color.$bg;
+         }
+      }
+
+      &:active,
+      &:hover,
+      &:focus {
+         color: color.$bg;
+
+         &::after {
+            width: 100%;
+         }
+      }
+   }
+
+   .choose-plan .btn-dark {
+      background-color: color.$white;
+      color: color.$bg;
+
+      span {
+         color: color.$bg;
+      }
+   }
+
+   .light-logo {
+      display: block;
+   }
+
+   .dark-logo {
+      display: none;
+   }
+
+   .theme-btn span {
+      color: color.$secondary;
+   }
+
+   .service-slide-card {
+      border-color: color.$light-border;
+      background: color.$heading;
+
+      i,
+      span {
+         color: color.$bg;
+      }
+
+      &:hover,
+      &:focus {
+         border-color: color.$primary;
+         background-color: color.$primary;
+      }
+   }
+
+   .about-us-thumbnail .top-content {
+      background: color.$heading;
+   }
+
+   .about-us-text-content ul li {
+      color: color.$bg;
+
+      svg {
+         path {
+            fill: color.$bg;
+         }
+      }
+   }
+
+   .process-card {
+      .process-text {
+         border-color: color.$light-border;
+      }
+
+      &::after {
+         background-color: color.$bg;
+      }
+   }
+
+   .process-card-two {
+      border-color: rgba(26, 26, 26, 0.2);
+   }
+
+   .award-card {
+      border-color: color.$light-border;
+   }
+
+   .testimonial-contact-wrapper::before {
+      background-color: color.$light-bg;
+   }
+
+   .contact-form {
+      background: color.$heading;
+   }
+
+   form .form-control {
+      border-color: color.$light-border;
+      color: color.$secondary;
+
+      &::placeholder {
+         color: rgba(26, 26, 26, 0.50);
+      }
+   }
+
+   .footer-card .form-check-input {
+      background: rgba(26, 26, 26, 0.2);
+   }
+
+   .footer-line {
+      background: rgba(26, 26, 26, 0.2);
+   }
+
+   .blog-card {
+      border-color: color.$light-border;
+
+      .blog-meta {
+
+         a {
+            color: color.$secondary;
+
+            &:hover,
+            &:focus {
+               color: color.$primary;
+            }
+         }
+
+         .dot {
+            background-color: color.$secondary;
+         }
+      }
+
+      .post-title {
+         color: color.$bg;
+
+         &:hover,
+         &:focus {
+            color: color.$primary;
+         }
+      }
+
+      &:hover,
+      &:focus {
+         border-color: rgba(26, 26, 26, 0.50);
+      }
+   }
+
+   .footer-card {
+      .footer-nav li a {
+         color: color.$secondary;
+
+         &:hover,
+         &:focus {
+            color: color.$primary;
+         }
+      }
+
+      .social-nav a {
+         background-color: color.$light-bg;
+         color: color.$bg;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+         }
+      }
+   }
+
+   .footer-wrapper {
+      background-color: color.$heading;
+
+      &.footer-2 .footer-card .social-nav a {
+         background-color: color.$heading;
+         color: color.$secondary;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+         }
+      }
+   }
+
+   .subscribe-form .form-control {
+      border-color: color.$light-border;
+      background: color.$heading;
+      color: color.$secondary;
+
+      &::placeholder {
+         color: rgba(26, 26, 26, 0.50);
+      }
+   }
+
+   .footer-bottom-nav a:hover,
+   .footer-bottom-nav a:focus {
+      color: color.$primary;
+   }
+
+   .right-side-vorix-offcanvas {
+      background-color: color.$light-bg;
+
+      .offcanvas-body {
+         p {
+            color: color.$bg;
+         }
+
+         .contact-info>div p {
+            color: color.$bg;
+         }
+
+         .social-nav a {
+            background-color: color.$heading;
+
+            &:hover,
+            &:focus {
+               background-color: color.$primary;
+            }
+         }
+
+         .contact-info>div .icon {
+            background-color: color.$heading;
+         }
+      }
+
+      .offcanvas-header .btn-close {
+         filter: none;
+         border: 1px solid color.$light-border;
+      }
+   }
+
+   .mission-vision-img-container .experience {
+      border-color: color.$heading;
+   }
+
+   .mission-vision-accordion {
+      .accordion-item {
+
+         .accordion-body {
+            color: color.$bg;
+            border-left-color: color.$light-border;
+            border-right-color: color.$light-border;
+            border-bottom-color: color.$light-border;
+         }
+
+         .accordion-button {
+            color: color.$secondary;
+            border-color: color.$light-border;
+
+            &::after {
+               background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19" stroke="%230E0E0E" stroke-width="2" stroke-linecap="square"/><path d="M5 12H19" stroke="%230E0E0E" stroke-width="2" stroke-linecap="square"/></svg>');
+            }
+
+            &:not(.collapsed) {
+
+               &::after {
+                  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M5%2012H19%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22/%3E%3C/svg%3E");
+               }
+            }
+         }
+      }
+   }
+
+   .service-two-swiper .swiper-slide {
+      border-color: color.$light-border;
+      background: transparent;
+   }
+
+   .service-two-swiper .swiper-slide h2 {
+      color: color.$secondary;
+   }
+
+   .service-two-swiper .swiper-slide .icon-wrapper {
+      background-color: color.$heading;
+   }
+
+   .swiper-pagination-2>span {
+      border-color: color.$secondary;
+   }
+
+   .swiper-pagination-2>span.swiper-pagination-bullet-active {
+      background-color: color.$secondary;
+   }
+
+   .portfolio-swiper-navigation>div {
+      background-color: color.$light-bg;
+   }
+
+   .stepper-wrap {
+      background-color: color.$secondary;
+   }
+
+   .stepper-wrap>div span {
+      background-color: color.$secondary;
+      border-color: color.$light-bg;
+   }
+
+   .price-card {
+      border-color: color.$light-border;
+
+      .price-info h6 {
+         color: color.$secondary;
+         opacity: 0.8;
+      }
+
+      .price-info .price {
+         color: color.$bg;
+      }
+   }
+
+   .faq-image .faq-info {
+      border-color: color.$heading;
+   }
+
+   .faq-accordion .accordion-item {
+      background-color: transparent;
+      border-color: color.$light-border;
+
+      .accordion-button {
+         &::after {
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19" stroke="%230E0E0E" stroke-width="2" stroke-linecap="square"/><path d="M5 12H19" stroke="%230E0E0E" stroke-width="2" stroke-linecap="square"/></svg>');
+         }
+
+         &:not(.collapsed) {
+
+            &::after {
+               background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M5%2012H19%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22/%3E%3C/svg%3E");
+            }
+         }
+      }
+   }
+
+   .faq-accordion .accordion-item .accordion-button {
+      color: color.$bg;
+   }
+
+   .faq-accordion .accordion-item .accordion-body {
+      color: color.$secondary;
+   }
+
+   .testimonial-swiper .swiper-slide .rating-info .company-logo span {
+      color: color.$bg;
+   }
+
+   .testimonial-swiper .swiper-slide .border-line {
+      background: color.$light-border;
+   }
+
+   .service-widget {
+      background-color: color.$light-bg;
+   }
+
+   .service-list li a {
+      border-color: color.$light-border;
+      color: color.$bg;
+
+      &:hover,
+      &:focus {
+         border-color: color.$primary;
+      }
+   }
+
+   .authentification-card {
+      background-color: color.$light-bg;
+   }
+
+   .or-divider {
+      background-color: color.$light-border;
+   }
+
+   .or-divider span {
+      background-color: color.$light-bg;
+   }
+
+   .authentification-card .social-nav a {
+      background-color: color.$heading;
+      color: color.$secondary;
+
+      &:hover,
+      &:focus {
+         background-color: color.$primary;
+      }
+   }
+
+   .team-details-content .team-member-title {
+      color: color.$secondary;
+   }
+
+   .team-details-content .social-nav a {
+      background-color: color.$light-bg;
+      color: color.$secondary;
+
+      &:hover,
+      &:focus {
+         background-color: color.$primary;
+      }
+   }
+
+   .team-progress-bar {
+      background-color: color.$secondary;
+
+      span {
+         background-color: color.$secondary;
+         border-color: color.$heading;
+      }
+   }
+
+   .contact-info-card {
+      border-color: color.$light-border;
+      background: color.$light-bg;
+
+      .icon-wrapper {
+         background-color: color.$white;
+      }
+   }
+
+   .dark-mode-404 {
+      display: none;
+   }
+
+   .light-mode-404 {
+      display: block;
+   }
+
+   .portfolio-widget {
+      background-color: color.$light-bg;
+
+      .social-nav a {
+         background-color: color.$heading;
+         color: color.$secondary;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+         }
+      }
+   }
+
+   .single-blog .post-title {
+      color: color.$secondary;
+
+      &:hover,
+      &:focus {
+         color: color.$primary;
+      }
+   }
+
+   .single-blog .blog-meta a {
+      color: color.$bg;
+
+      &:hover,
+      &:focus {
+         color: color.$primary;
+      }
+   }
+
+   .blog-widget {
+      background-color: color.$light-bg;
+   }
+
+   .blog-list li a,
+   .tag-list a {
+      border-color: color.$light-border;
+      color: color.$bg;
+
+      &:hover,
+      &:focus {
+         border-color: color.$primary;
+      }
+   }
+
+   .blog-pagination li a {
+      background-color: color.$light-bg;
+
+      &:hover,
+      &:focus {
+         background-color: color.$primary;
+      }
+   }
+
+   .tags-share {
+      .tags-list li a {
+         color: color.$secondary;
+      }
+
+      .tags-list li:first-child {
+         color: color.$bg;
+      }
+
+      .share-list li:first-child {
+         color: color.$bg;
+      }
+
+      .share-list li a {
+         background-color: color.$light-bg;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+         }
+      }
+   }
+
+   .blog-pager a {
+      color: color.$secondary;
+
+      &:hover,
+      &:focus {
+         color: color.$primary;
+      }
+   }
+
+   .blog-pager {
+      border-top-color: color.$light-border;
+   }
+
+   .blog-comments-list li {
+      border-color: color.$light-border;
+   }
+
+   .core-feature-card {
+      border-color: color.$light-border;
+
+      span,
+      svg {
+         color: color.$secondary;
+      }
+   }
+
+   .client-testimonial-card {
+      border-color: color.$light-border;
+      background: color.$heading;
+   }
+}

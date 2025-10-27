@@ -1,0 +1,20 @@
+@use 'rs';
+@use 'color';
+
+/* Partner */
+
+.partners-slide {
+   gap: 2rem;
+
+   img {
+      max-height: 60px;
+   }
+
+   @media #{rs.$bp-xl} {
+      gap: 3rem;
+
+      img {
+         max-height: 80px;
+      }
+   }
+}

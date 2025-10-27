@@ -1,0 +1,39 @@
+@use 'rs';
+@use 'color';
+
+/* Cookie */
+
+.cookiealert {
+   position: fixed;
+   left: 2rem;
+   bottom: 2rem;
+   z-index: 1000;
+   max-width: 450px;
+   padding: 40px 32px;
+   border-radius: 20px;
+   background-color: color.$primary;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(-16px);
+   transition-duration: 400ms;
+
+   &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+   }
+
+   h2 {
+      color: color.$bg;
+   }
+
+   p {
+      font-size: 14px;
+      color: color.$bg;
+   }
+
+   a {
+      color: color.$bg;
+      text-decoration: underline;
+   }
+}

@@ -1,0 +1,140 @@
+@use 'rs';
+@use 'color';
+
+/* FAQ */
+
+.faq-image {
+   position: relative;
+   z-index: 1;
+
+   img {
+      border-radius: 21px;
+   }
+
+   .faq-info {
+      border-radius: 20px;
+      background: color.$primary;
+      width: 230px;
+      padding: 22px 20px;
+      gap: 13px;
+      border: 6px solid color.$bg;
+      position: absolute;
+      bottom: -6px;
+      left: -6px;
+      z-index: 10;
+
+      @media #{rs.$bp-lg} {
+         width: 283px;
+      }
+
+      h2 {
+         color: color.$bg;
+         font-size: 42px;
+         line-height: 1.2;
+         letter-spacing: -1.8px;
+
+         @media #{rs.$bp-lg} {
+            font-size: 60px;
+         }
+      }
+
+      p {
+         color: color.$secondary;
+      }
+   }
+}
+
+.faq-accordion {
+   .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+
+   .accordion-item {
+      background-color: transparent;
+      border-radius: 8px;
+      border: 1px solid color.$border;
+
+      .accordion-button {
+         border-radius: 8px;
+         background: transparent;
+         color: color.$heading;
+         font-size: 16px;
+         font-weight: 600;
+         letter-spacing: -0.4px;
+         padding: 20px 30px;
+
+         @media #{rs.$bp-lg} {
+            font-size: 20px;
+         }
+
+         &::after {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(%23clip0_1_908)"><path d="M12.1429 8.21429C11.9456 8.21429 11.7857 8.05437 11.7857 7.85714V1.78571C11.7857 0.799491 10.9862 0 10 0C9.01378 0 8.21429 0.799491 8.21429 1.78571V7.85714C8.21429 8.05437 8.05437 8.21429 7.85714 8.21429H1.78571C0.799491 8.21429 0 9.01378 0 10C0 10.9862 0.799491 11.7857 1.78571 11.7857H7.85714C8.05437 11.7857 8.21429 11.9456 8.21429 12.1429V18.2143C8.21429 19.2005 9.01378 20 10 20C10.9862 20 11.7857 19.2005 11.7857 18.2143V12.1429C11.7857 11.9456 11.9456 11.7857 12.1429 11.7857H18.2143C19.2005 11.7857 20 10.9862 20 10C20 9.01378 19.2005 8.21429 18.2143 8.21429H12.1429Z" fill="%23FEFEFE"/></g><defs><clipPath id="clip0_1_908"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>');
+         }
+
+         &:not(.collapsed) {
+            box-shadow: none;
+            border-radius: 8px 8px 0 0;
+
+            &::after {
+               background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18.5714 8.57031H1.42858C0.639598 8.57031 0 9.20991 0 9.99889C0 10.7879 0.639598 11.4275 1.42858 11.4275H18.5714C19.3604 11.4275 20 10.7879 20 9.99889C20 9.20991 19.3604 8.57031 18.5714 8.57031Z" fill="%23FEFEFE"/></svg>');
+            }
+         }
+      }
+
+      .accordion-body {
+         padding: 20px 30px;
+         color: color.$text;
+         font-size: 16px;
+         border-radius: 0 0 9px 9px;
+
+         @media #{rs.$bp-xl} {
+            font-size: 18px;
+         }
+      }
+   }
+
+   &.service-details-faq {
+      .accordion-item {
+         border: 1px solid rgba(254, 254, 254, 0.3);
+
+         .accordion-button {
+            border-radius: 8px;
+            background: transparent;
+            color: color.$heading;
+            font-size: 16px;
+            padding: 20px 30px;
+
+            @media #{rs.$bp-lg} {
+               font-size: 20px;
+            }
+
+            &::after {
+               background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(%23clip0_1_908)"><path d="M12.1429 8.21429C11.9456 8.21429 11.7857 8.05437 11.7857 7.85714V1.78571C11.7857 0.799491 10.9862 0 10 0C9.01378 0 8.21429 0.799491 8.21429 1.78571V7.85714C8.21429 8.05437 8.05437 8.21429 7.85714 8.21429H1.78571C0.799491 8.21429 0 9.01378 0 10C0 10.9862 0.799491 11.7857 1.78571 11.7857H7.85714C8.05437 11.7857 8.21429 11.9456 8.21429 12.1429V18.2143C8.21429 19.2005 9.01378 20 10 20C10.9862 20 11.7857 19.2005 11.7857 18.2143V12.1429C11.7857 11.9456 11.9456 11.7857 12.1429 11.7857H18.2143C19.2005 11.7857 20 10.9862 20 10C20 9.01378 19.2005 8.21429 18.2143 8.21429H12.1429Z" fill="%23FEFEFE"/></g><defs><clipPath id="clip0_1_908"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>');
+            }
+
+            &:not(.collapsed) {
+               box-shadow: none;
+               color: color.$secondary;
+               background-color: color.$primary;
+               border-radius: 8px 8px 0 0;
+
+               &::after {
+                  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 10H2C0.895431 10 0 10.8954 0 12C0 13.1046 0.89543 14 2 14H22C23.1046 14 24 13.1046 24 12C24 10.8954 23.1046 10 22 10Z" fill="%230E0E0E"/></svg>');
+               }
+            }
+         }
+
+         .accordion-body {
+            color: color.$secondary;
+            padding-top: 0;
+            background-color: color.$primary;
+
+            @media #{rs.$bp-xl} {
+               font-size: 18px;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,133 @@
+@use 'rs';
+@use 'color';
+
+/* About */
+
+.about-us-thumbnail {
+   position: relative;
+   border-radius: 20px;
+   z-index: 1;
+
+   >img {
+      border-radius: 20px;
+   }
+
+   .top-content {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-radius: 20px 0px 0px 0px;
+      background: color.$bg;
+      width: 200px;
+      padding: 12px;
+      z-index: 100;
+
+      @media #{rs.$bp-xl} {
+         width: 340px;
+      }
+
+      &::after {
+         position: absolute;
+         width: calc(100% - 12px);
+         height: calc(100% - 12px);
+         top: 12px;
+         left: 12px;
+         border-radius: 10px;
+         z-index: -10;
+         background-color: #D9D9D9;
+         content: '';
+      }
+
+      h6 {
+         color: color.$bg;
+         padding-top: 15px;
+         padding-left: 20px;
+         margin-bottom: 8px !important;
+         font-size: 12px;
+
+         @media #{rs.$bp-xl} {
+            padding-left: 35px;
+            font-size: 14px;
+         }
+      }
+
+      .clients-images {
+         padding-top: 20px;
+         padding-left: 20px;
+
+         @media #{rs.$bp-xl} {
+            padding-left: 35px;
+         }
+
+         img {
+            width: 32px;
+            border-radius: 80px;
+            border: 2px solid color.$bg;
+
+            @media #{rs.$bp-xl} {
+               width: 50px;
+            }
+
+            &:nth-child(1) {
+               transform: translateX(0);
+               z-index: 100;
+            }
+
+            &:nth-child(2) {
+               transform: translateX(-20px);
+            }
+
+            &:nth-child(3) {
+               transform: translateX(-40px);
+            }
+
+            &:nth-child(4) {
+               transform: translateX(-60px);
+            }
+         }
+      }
+   }
+}
+
+.about-us-text-content {
+   display: flex;
+   flex-direction: column;
+   gap: 28px;
+
+   ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      li {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         color: color.$white;
+         font-size: 16px;
+
+         @media #{rs.$bp-xl} {
+            font-size: 18px;
+         }
+      }
+   }
+}
+
+.about-us-wrapper {
+   position: relative;
+   z-index: 1;
+
+   .about-left-side-bg {
+      width: calc(50% - 1rem);
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      position: absolute;
+      display: none;
+
+      @media #{rs.$bp-md} {
+         display: block;
+      }
+   }
+}

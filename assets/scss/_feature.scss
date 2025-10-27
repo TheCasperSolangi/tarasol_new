@@ -1,0 +1,135 @@
+@use 'rs';
+@use 'color';
+
+/* Feature */
+
+.mission-vision-img-container {
+   position: relative;
+   z-index: 1;
+   padding-right: 100px;
+
+   img {
+      border-radius: 20px;
+   }
+
+   .experience {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      width: 160px;
+      height: 160px;
+      background-color: color.$primary;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 10px solid color.$bg;
+
+      @media #{rs.$bp-lg} {
+         width: 200px;
+         height: 200px;
+         border: 20px solid color.$bg;
+      }
+
+      h3 {
+         color: color.$bg;
+         font-size: 32px;
+         letter-spacing: -1.2px;
+
+         @media #{rs.$bp-lg} {
+            font-size: 40px;
+         }
+      }
+
+      span {
+         display: block;
+         margin-bottom: 0;
+         color: color.$bg;
+         font-size: 14px;
+
+         @media #{rs.$bp-lg} {
+            font-size: 16px;
+         }
+      }
+   }
+}
+
+.mission-vision-content {
+   >h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      letter-spacing: -1.8px;
+
+      @media #{rs.$bp-lg} {
+         font-size: 42px;
+      }
+
+      @media #{rs.$bp-xl} {
+         font-size: 60px;
+      }
+   }
+
+   >p {
+      margin-top: 18px;
+   }
+}
+
+.mission-vision-accordion {
+   .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+
+   .accordion-item {
+      background-color: transparent;
+      border-radius: 8px;
+      border: 0;
+
+      .accordion-button {
+         border-radius: 8px;
+         background: transparent;
+         color: color.$heading;
+         font-size: 18px;
+         font-weight: 600;
+         letter-spacing: -0.4px;
+         border: 1px solid color.$border;
+
+         @media #{rs.$bp-lg} {
+            font-size: 20px;
+         }
+
+         &::after {
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M12%205V19%22%20stroke%3D%22%23FEFEFE%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22/%3E%3Cpath%20d%3D%22M5%2012H19%22%20stroke%3D%22%23FEFEFE%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22/%3E%3C/svg%3E");
+         }
+
+         &:not(.collapsed) {
+            color: color.$bg;
+            background-color: color.$primary;
+            box-shadow: none;
+            border-radius: 8px 8px 0 0;
+
+            &::after {
+               background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M5%2012H19%22%20stroke%3D%22%230A0C00%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22/%3E%3C/svg%3E");
+            }
+         }
+      }
+
+      .accordion-body {
+         padding: 20px 30px;
+         color: color.$text;
+         font-size: 16px;
+         border-radius: 0 0 9px 9px;
+         border-left: 1px solid color.$border;
+         border-right: 1px solid color.$border;
+         border-bottom: 1px solid color.$border;
+
+         @media #{rs.$bp-xl} {
+            font-size: 18px;
+         }
+      }
+   }
+}

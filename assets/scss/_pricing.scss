@@ -1,0 +1,63 @@
+@use 'rs';
+@use 'color';
+
+/* Pricing */
+
+.price-card {
+   border-radius: 20px;
+   border: 1px solid color.$border;
+   padding: 40px 36px;
+
+   .price-info {
+      margin-bottom: 40px;
+
+      h6 {
+         color: color.$text;
+         font-size: 14px;
+         margin-bottom: 14px !important;
+         opacity: 0.8;
+      }
+
+      .price {
+         color: color.$white;
+         font-size: 42px;
+         letter-spacing: -1.8px;
+
+         @media #{rs.$bp-xl} {
+            font-size: 60px;
+         }
+
+         span {
+            font-size: 16px;
+            letter-spacing: 0;
+
+            @media #{rs.$bp-xl} {
+               font-size: 18px;
+            }
+         }
+      }
+   }
+
+   .price-description {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li {
+         font-size: 16px;
+         line-height: 1.4;
+         display: flex;
+         align-items: center;
+         gap: 8px;
+
+         @media #{rs.$bp-xl} {
+            font-size: 18px;
+         }
+
+         span {
+            font-size: 24px;
+         }
+      }
+   }
+}

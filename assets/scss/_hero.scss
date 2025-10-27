@@ -1,0 +1,129 @@
+@use 'rs';
+@use 'color';
+
+/* Hero */
+
+.hero-wrapper {
+   margin-top: 68px;
+
+   @media #{rs.$bp-lg} {
+      margin-top: 110px;
+   }
+}
+
+.hero-content {
+   h2 {
+      font-weight: 700;
+      letter-spacing: -3.6px;
+      font-size: 56px;
+
+      @media #{rs.$bp-md} {
+         font-size: 72px;
+      }
+
+      @media #{rs.$bp-lg} {
+         font-size: 90px;
+      }
+
+      @media #{rs.$bp-xl} {
+         font-size: 110px;
+      }
+
+      @media #{rs.$bp-xxl} {
+         font-size: 120px;
+      }
+   }
+
+   .hero-subtitle {
+      color: color.$text;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0px;
+      margin-left: 0;
+      line-height: 1.75;
+      display: block;
+
+      @media #{rs.$bp-md} {
+         margin-left: 50px;
+         font-size: 14px;
+      }
+
+      @media #{rs.$bp-lg} {
+         font-size: 15px;
+      }
+
+      @media #{rs.$bp-xl} {
+         font-size: 18px;
+      }
+   }
+
+   &.home2 {
+      h2 {
+         color: color.$white;
+         font-size: 32px;
+         font-weight: 700;
+         line-height: 1.1;
+         letter-spacing: -2px;
+
+         @media #{rs.$bp-md} {
+            font-size: 56px;
+         }
+
+         @media #{rs.$bp-lg} {
+            font-size: 66px;
+         }
+
+         @media #{rs.$bp-xl} {
+            font-size: 80px;
+         }
+
+         @media #{rs.$bp-xxl} {
+            font-size: 100px;
+         }
+      }
+
+      .imgs-group {
+         display: flex;
+         align-items: center;
+
+         img {
+            flex: 0 0 50px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid color.$heading;
+
+            &:nth-child(2) {
+               transform: translateX(-24px);
+            }
+         }
+
+         div {
+            flex: 0 0 50px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid color.$heading;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: color.$primary;
+            color: color.$bg;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.14px;
+            text-transform: uppercase;
+            text-align: center;
+            transform: translateX(-48px);
+         }
+      }
+
+      h6 {
+         color: color.$heading;
+         font-size: 14px;
+         font-weight: 600;
+         letter-spacing: -0.14px;
+         text-transform: uppercase;
+      }
+   }
+}

@@ -1,0 +1,121 @@
+@use 'rs';
+@use 'color';
+
+/* Work Process */
+
+.work-process {
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+}
+
+.process-card {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   gap: 28px;
+
+   @media #{rs.$bp-xl} {
+      gap: 41px;
+   }
+
+   &::after {
+      position: absolute;
+      width: 1.385px;
+      height: calc(100% - 44px);
+      top: 65px;
+      left: 27px;
+      background-color: color.$white;
+      content: '';
+      z-index: 10;
+   }
+
+   &:last-child::after {
+      display: none;
+   }
+
+   .number {
+      flex: 0 0 54px;
+      max-width: 54px;
+      width: 54px;
+      height: 54px;
+      background-color: color.$secondary;
+      color: color.$white;
+      font-size: 19.5px;
+      letter-spacing: -0.194px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+   }
+
+   .process-text {
+      border: 1px solid color.$border;
+      padding: 24px 30px;
+      border-radius: 12px;
+
+      @media #{rs.$bp-xl} {
+         padding: 30px 36px;
+         border-radius: 20px;
+      }
+   }
+}
+
+.stepper-wrap {
+   position: relative;
+   z-index: 1;
+   height: 1px;
+   background-color: #F6F5F3;
+   margin-top: 35px;
+
+   >div {
+      position: absolute;
+      z-index: 100;
+      top: -33px;
+
+      h6 {
+         font-size: 14px;
+         line-height: 1.5;
+         letter-spacing: -0.14px;
+         margin-bottom: 0 !important;
+         text-transform: uppercase;
+         padding-left: 4px;
+      }
+
+      span {
+         width: 24px;
+         height: 24px;
+         display: block;
+         background-color: #F6F5F3;
+         border: 4px solid color.$secondary;
+         border-radius: 50%;
+      }
+
+      &:nth-child(1) {
+         left: -1px;
+      }
+
+      &:nth-child(2) {
+         left: 37%;
+      }
+
+      &:nth-child(3) {
+         left: 73%;
+      }
+   }
+}
+
+.process-card-two {
+   border-radius: 20px;
+   border: 1px solid color.$border;
+   padding: 50px 36px;
+
+   h4 {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      color: color.$white;
+      font-size: 24px;
+      letter-spacing: -0.48px;
+   }
+}

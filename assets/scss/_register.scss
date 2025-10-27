@@ -1,0 +1,72 @@
+@use 'rs';
+@use 'color';
+
+/* Authentification */
+
+.authentification-card {
+   border-radius: 20px;
+   padding: 40px 30px;
+   background-color: color.$secondary;
+
+   @media #{rs.$bp-lg} {
+      padding: 60px 40px;
+   }
+
+   .social-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 40px;
+
+      a {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 44px;
+         height: 44px;
+         background-color: color.$bg;
+         border-radius: 50%;
+         font-size: 16px;
+         color: color.$white;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+            color: color.$secondary;
+         }
+      }
+   }
+}
+
+.or-divider {
+   position: relative;
+   z-index: 1;
+   height: 1px;
+   background-color: color.$border;
+
+   span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: color.$secondary;
+      padding: 4px 8px;
+      z-index: 10;
+   }
+}
+
+.create-password {
+   position: relative;
+   z-index: 1;
+   font-size: 24px;
+
+   label {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      right: 1.5rem;
+      z-index: 100;
+      cursor: pointer;
+   }
+}

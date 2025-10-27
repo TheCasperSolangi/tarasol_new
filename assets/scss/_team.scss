@@ -1,0 +1,128 @@
+@use 'rs';
+@use 'color';
+
+/* Team */
+
+.team-card {
+   transition-duration: 400ms;
+
+   img {
+      transition-duration: 400ms;
+      border-radius: 22px;
+      margin-bottom: 28px;
+      width: 100%;
+   }
+
+   .team-info {
+      h4 {
+         letter-spacing: -0.48px;
+         margin-bottom: 0.25rem !important;
+      }
+
+      p {
+         font-size: 16px;
+      }
+   }
+
+   &:hover,
+   &:focus {
+      transform: translateY(-10px);
+
+      img {
+         filter: grayscale(100%);
+      }
+   }
+}
+
+.team-details-img {
+   img {
+      border-radius: 32px;
+      width: 100%;
+   }
+}
+
+.team-details-content {
+   .team-member-title {
+      color: color.$heading;
+      font-size: 32px;
+      letter-spacing: -1.8px;
+      transform: translateX(-2px);
+
+      @media #{rs.$bp-sm} {
+         font-size: 42px;
+      }
+
+      @media #{rs.$bp-xxl} {
+         font-size: 60px;
+      }
+   }
+
+   .social-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+
+      a {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 44px;
+         height: 44px;
+         background-color: color.$secondary;
+         border-radius: 50%;
+         font-size: 16px;
+         color: color.$white;
+
+         &:hover,
+         &:focus {
+            background-color: color.$primary;
+            color: color.$secondary;
+         }
+      }
+   }
+}
+
+.team-progress-bar {
+   position: relative;
+   z-index: 1;
+   background-color: #F6F5F3;
+   height: 1px;
+   width: 100%;
+   margin-bottom: 25px;
+
+   span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #F6F5F3;
+      border: 4px solid color.$secondary;
+      position: absolute;
+      z-index: 10;
+      top: -12px;
+
+      &:nth-child(2) {
+         left: 25.5%;
+      }
+
+      &:nth-child(3) {
+         left: 51.5%;
+      }
+
+      &:nth-child(4) {
+         left: 77.5%;
+      }
+   }
+}
+
+.team-skill-card {
+   .date {
+      color: color.$primary;
+      margin-bottom: 8px;
+   }
+
+   .institution {
+      font-size: 14px;
+   }
+}

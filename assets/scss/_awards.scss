@@ -1,0 +1,59 @@
+@use 'rs';
+@use 'color';
+
+/* Award */
+
+.award-card-container {
+   display: flex;
+   gap: 30px;
+   flex-direction: column;
+}
+
+.award-card {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 30px;
+   flex-wrap: wrap;
+   padding: 28px;
+   border-radius: 20px;
+   border: 1px solid color.$border;
+
+   @media #{rs.$bp-xl} {
+      padding: 36px;
+   }
+
+   .award-name-description {
+      max-width: 450px;
+
+      h3 {
+         font-size: 22px;
+         letter-spacing: -0.6px;
+         margin-bottom: 12px;
+
+         @media #{rs.$bp-md} {
+            font-size: 24px;
+         }
+
+         @media #{rs.$bp-xl} {
+            font-size: 30px;
+         }
+      }
+
+      p {
+         font-size: 16px;
+         margin-bottom: 0;
+      }
+   }
+
+   .award-image {
+      max-width: 200px;
+   }
+
+   .awarded-card {
+      h2 {
+         font-size: 30px;
+         margin-bottom: 0;
+      }
+   }
+}

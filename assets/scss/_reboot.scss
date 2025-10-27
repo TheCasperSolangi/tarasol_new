@@ -1,0 +1,169 @@
+/* Reboot */
+
+@use 'rs';
+@use 'color';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    color: color.$text;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    background-color: color.$bg;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: color.$heading;
+    font-weight: 600;
+    line-height: 1.4;
+    font-family: "Unbounded", sans-serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.67;
+
+    @media #{rs.$bp-xl} {
+        font-size: 18px;
+    }
+}
+
+a,
+a:hover,
+a:focus {
+    transition-duration: 500ms;
+    text-decoration: none;
+    outline: 0 solid transparent;
+    color: color.$heading;
+    font-family: "Unbounded", sans-serif;
+}
+
+ul,
+ol {
+    margin-bottom: 0;
+}
+
+button,
+.btn {
+    font-family: "Unbounded", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input:required,
+textarea:required {
+    box-shadow: none !important;
+}
+
+input:invalid,
+textarea:invalid {
+    box-shadow: none !important;
+}
+
+/* Container */
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 320px;
+}
+
+@media (min-width:400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 360px;
+    }
+}
+
+@media (min-width:480px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 420px;
+    }
+}
+
+@media (min-width:576px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 520px;
+    }
+}
+
+@media (min-width:768px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 700px;
+    }
+}
+
+@media (min-width:992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 940px;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1120px;
+    }
+}
+
+@media (min-width:1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1280px;
+    }
+}
